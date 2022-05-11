@@ -1,0 +1,9 @@
+food(burger).
+food(sandwich).
+food(pizza).
+food(fries).
+
+lunch(sandwich).
+dinner(pizza).
+
+meal(X) :- food(X).

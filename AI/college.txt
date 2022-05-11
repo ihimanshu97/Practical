@@ -1,0 +1,19 @@
+class(fy,it).
+class(sy,it).
+class(ty,it).
+college(rscoe).
+
+city(rscoe,pune).
+state(rscoe,mh).
+
+branch(it,rscoe).
+branch(cs,rscoe).
+branch(mech,rscoe).
+
+sub(fy,cpp).
+sub(sy,ds).
+sub(ty,al).
+
+location(X,Y) :- city(C,X), state(C,Y).
+
+learns(X,Y) :- class(C,X), sub(C,Y).

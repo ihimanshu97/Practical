@@ -1,0 +1,21 @@
+bike(pulsar).
+bike(yamaha).
+bike(ktm).
+bike(honda).
+bike(tvs).
+likes(himanshu, pulsar).
+likes(frnd1, ktm).
+category(ktm, sports).
+category(bajaj, commutator).
+location(bajaj, india).
+location(yamaha, japan).
+
+
+price(yamaha, 100000).
+price(pulsar, 650000).
+
+find_max(X,Y,X):- price(X,A),price(Y,B),A>B , ! .
+find_max(X,Y,Y):- price(X,A),price(Y,B),B>A, ! .
+
+find_min(X,Y,X):- price(X,A),price(Y,B),A<B , ! .
+find_min(X,Y,Y):- price(X,A),price(Y,B),B<A, ! .
